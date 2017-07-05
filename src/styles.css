@@ -574,6 +574,11 @@ p.w3l-ad {
 i.blue-star {
   color: #3399cc;
 }
+i.orange-star {
+  color: orangered;
+  transform: scale(2);
+  margin: 10px;
+}
 i.gray-star {
   color: #808080;
 }
