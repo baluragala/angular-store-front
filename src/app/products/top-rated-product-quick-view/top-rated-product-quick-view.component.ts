@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'sf-top-rated-product-quick-view',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopRatedProductQuickViewComponent implements OnInit {
 
-  constructor() { }
+  @Input() product;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

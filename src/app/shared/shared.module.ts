@@ -4,10 +4,14 @@ import {HeaderComponent} from "./header/header.component";
 import {LogoWithSearchComponent} from './logo-with-search/logo-with-search.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {FooterComponent} from './footer/footer.component';
+import {BsDropdownModule} from "ngx-bootstrap";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    RouterModule
   ],
   declarations: [
     HeaderComponent,

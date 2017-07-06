@@ -5,9 +5,9 @@
     </div>
     <div class="agile-login">
       <ul>
-        <li><a href="registered.html"> Create Account </a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="contact.html">Help</a></li>
+        <li><a [routerLink]="'register'"> Create Account </a></li>
+        <li><a [routerLink]="'login'">Login</a></li>
+        <li><a [routerLink]="'contact'">Help</a></li>
 
       </ul>
     </div>
@@ -15,9 +15,10 @@
       <form action="#" method="post" class="last">
         <input type="hidden" name="cmd" value="_cart">
         <input type="hidden" name="display" value="1">
-        <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+        <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down"
+                                                                            aria-hidden="true"></i></button>
       </form>
     </div>
-    <div class="clearfix"> </div>
+    <div class="clearfix"></div>
   </div>
 </div>
