@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'sf-navigation',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  @Input() menu: [string];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

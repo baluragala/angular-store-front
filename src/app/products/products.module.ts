@@ -5,6 +5,8 @@ import {TopRatedProductQuickViewComponent} from './top-rated-product-quick-view/
 import {CategoryHomeComponent} from './category-home/category-home.component';
 import {RouterModule} from "@angular/router";
 import {PRODUCTS_ROUTES} from "./products.routes";
+import { DiscountPipe } from './discount.pipe';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import {PRODUCTS_ROUTES} from "./products.routes";
   declarations: [
     TopRatedProductsComponent,
     TopRatedProductQuickViewComponent,
-    CategoryHomeComponent
+    CategoryHomeComponent,
+    DiscountPipe,
+    DetailComponent
   ],
   exports: [TopRatedProductsComponent]
 })
