@@ -7,35 +7,71 @@
         <input type="text"
                placeholder="First Name..."
                required
+               #firstName="ngModel"
                name="first_name"
                [(ngModel)]="user.first_name">
+
+        <p class="error" *ngIf="firstName?.dirty && firstName?.errors?.required">
+          First Name is required
+        </p>
+
         <input type="text"
                placeholder="Last Name..."
                required
                name="last_name"
+               #lastName="ngModel"
                [(ngModel)]="user.last_name"
         >
+
+        <p class="error" *ngIf="lastName?.dirty && lastName?.errors?.required">
+          Last Name is required
+        </p>
+
         <h6>Login information</h6>
         <input type="email"
                placeholder="Email Address"
                required
+               #email="ngModel"
                name="email"
                [(ngModel)]="user.email"
         >
+
+        <p class="error" *ngIf="email?.dirty && email?.errors?.required">
+          Email is required
+        </p>
+
         <input type="password"
                placeholder="Password"
                required
+               #password="ngModel"
                name="password"
                [(ngModel)]="user.password"
         >
-        <input type="password" placeholder="Password Confirmation" required=" ">
+
+        <p class="error" *ngIf="password?.dirty && password?.errors?.required">
+          Password is required
+        </p>
+
+        <input type="password"
+               placeholder="Password Confirmation"
+               required
+               #confirmPassword="ngModel"
+               name="confirmPassword"
+               [(ngModel)]="user.confirmPassword"
+        >
+        <p class="error" *ngIf="confirmPassword?.dirty && confirmPassword?.errors?.required">
+          Confirm Password is required
+        </p>
+        <p class="error" *ngIf="confirmPassword.value !== password.value">
+          Password and Confirm password must match
+        </p>
         <div class="register-check-box">
           <div class="check">
             <label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>I accept the terms and
               conditions</label>
           </div>
         </div>
-        <input type="submit" value="Register">
+        <input type="submit" value="Register" [disabled]="!registrationFrom.valid">
       </form>
     </div>
   </div>

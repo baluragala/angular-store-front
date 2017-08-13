@@ -8,10 +8,16 @@
                placeholder="Email Address"
                formControlName="email"
         >
+        <small *ngIf="!loginForm.controls.email.valid" class="text-danger">
+          email is required
+        </small>
         <input type="password"
                placeholder="Password"
                formControlName="password"
         >
+        <small *ngIf="!loginForm.controls.password.valid" class="text-danger">
+          password is required
+        </small>
         <div class="forgot">
           <a href="#">Forgot Password?</a>
         </div>
