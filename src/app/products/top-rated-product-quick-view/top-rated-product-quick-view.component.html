@@ -1,30 +1,20 @@
-<div class="col-md-4 top_brand_left">
-  <div class="hover14 column">
-    <div class="agile_top_brand_left_grid">
-      <div class="agile_top_brand_left_grid_pos">
-        <i class="fa fa-star orange-star img-responsive" aria-hidden="true"></i>
+<div class="col-md-3">
+  <div class="product-quick-view">
+    <figure>
+      <a><img title=" " alt=" " src="../../../assets/images/7.png"></a>
+      <p>{{product.name}}</p>
+      <div class="stars">
+        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+        <i class="fa fa-star gray-star" aria-hidden="true"></i>
       </div>
-      <div class="agile_top_brand_left_grid1">
-        <figure>
-          <div class="snipcart-item block">
-            <div class="snipcart-thumb">
-              <a href="products.html"><img title=" " alt=" " src="../../../assets/images/7.png"></a>
-              <p>{{product.name}}</p>
-              <div class="stars">
-                <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                <i class="fa fa-star gray-star" aria-hidden="true"></i>
-              </div>
-              <h4>{{product.price | currency:'USD':true}} <span>{{product.offerPrice | currency:'USD':true}}</span></h4>
-            </div>
-            <div class="snipcart-details top_brand_home_details">
-              <input type="button" name="submit" value="Add to cart" class="button">
-            </div>
-          </div>
-        </figure>
-      </div>
-    </div>
+      <h4 class="price"><span [ngClass]="{'original-price': product.offerPrice > 0}">{{product.price | currency:'USD':true}}</span>
+        <span class="offer-price">{{product.offerPrice | currency:'USD':true}}</span>
+      </h4>
+      <button class="btn btn-success" type="button" name="submit" (click)="addToCart(product)">Add To Cart</button>
+    </figure>
   </div>
 </div>
+

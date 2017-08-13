@@ -7,6 +7,7 @@ import {RouterModule} from "@angular/router";
 import {PRODUCTS_ROUTES} from "./products.routes";
 import { DiscountPipe } from './discount.pipe';
 import { DetailComponent } from './detail/detail.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { DetailComponent } from './detail/detail.component';
     TopRatedProductQuickViewComponent,
     CategoryHomeComponent,
     DiscountPipe,
-    DetailComponent
+    DetailComponent,
+    CartComponent
   ],
   exports: [TopRatedProductsComponent]
 })

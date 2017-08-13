@@ -6,3 +6,8 @@
   border: 1px solid #c0bebe;
   margin-bottom: 1em;
 }
+
+.header {
+  padding-top: 25px;
+  text-align: center;
+}

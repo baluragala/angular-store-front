@@ -1,7 +1,7 @@
 <div class="agileits_header">
   <div class="container">
     <div class="w3l_offers">
-      <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a></p>
+      <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a>SHOP NOW</a></p>
     </div>
     <div class="agile-login">
       <ul>
@@ -12,12 +12,10 @@
       </ul>
     </div>
     <div class="product_list_header">
-      <form action="#" method="post" class="last">
-        <input type="hidden" name="cmd" value="_cart">
-        <input type="hidden" name="display" value="1">
-        <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down"
-                                                                            aria-hidden="true"></i></button>
-      </form>
+      <a class="w3view-cart" value="" [routerLink]="['cart']">
+          <span class="badge"><i class="fa fa-cart-arrow-down"
+                                 aria-hidden="true"></i>  {{cart.length}}</span>
+      </a>
     </div>
     <div class="clearfix"></div>
   </div>

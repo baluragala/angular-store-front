@@ -1,0 +1,39 @@
+.agileits_header {
+  background: #333333;
+  padding: 12px 0;
+}
+
+.w3l_offers {
+  float: left;
+  padding: 9px 0;
+  width: 47%;
+}
+
+.w3l_offers p {
+  font-size: 15px;
+  color: #fff;
+}
+
+.w3l_offers p a {
+  color: #fe9126;
+  text-decoration: none;
+}
+
+.links {
+  float: left;
+  width: 40%;
+  text-align: center;
+  padding: 9px 0;
+}
+
+.links ul li {
+  display: inline-block;
+  padding: 0em 1em;
+}
+
+.links ul li a {
+  font-size: 1em;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+}

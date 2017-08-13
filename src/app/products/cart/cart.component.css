@@ -1,3 +1,17 @@
+.top-brands {
+  padding: 1em;
+}
+
+.hover14.column {
+  border: 1px solid #c0bebe;
+  margin-bottom: 1em;
+}
+
+.header {
+  padding-top: 25px;
+  text-align: center;
+}
+
 .product-quick-view {
   padding: 1em;
   display: flex;

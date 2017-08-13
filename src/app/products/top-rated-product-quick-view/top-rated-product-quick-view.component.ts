@@ -1,4 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {ApiService} from "../../api.service";
 
 @Component({
   selector: 'sf-top-rated-product-quick-view',
@@ -9,10 +10,14 @@ export class TopRatedProductQuickViewComponent implements OnInit {
 
   @Input() product;
 
-  constructor() {
+  constructor(private apiService: ApiService) {
   }
 
   ngOnInit() {
+  }
+
+  addToCart(product) {
+    this.apiService.addToCart(product);
   }
 
 }

@@ -31,6 +31,8 @@ body a:hover{
 span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
   position: relative !important;
 }
+
+
 .btn-danger {
   color: #fff;
   background-color: #3399cc;
@@ -71,23 +73,8 @@ input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input
   -o-transition: .5s ease-in;
   -ms-transition: .5s ease-in;
 }
-.agileits_header {
-  background: #333333;
-  padding: 12px 0;
-}
-.w3l_offers {
-  float: left;
-  padding: 9px 0;
-  width: 47%;
-}
-.w3l_offers p {
-  font-size: 15px;
-  color: #fff;
-}
-.w3l_offers p a {
-  color: #fe9126;
-  text-decoration: none;
-}
+
+
 .w3l_search {
   float: right;
   width: 25.33%;
@@ -2918,9 +2905,7 @@ h3.agileits-icons-title {
   .snipcart-details input.button {
     width: 64%;
   }
-  .agile-login {
-    width: 43%;
-  }
+
   .w3l_search input[type="search"] {
     width: 91%;
   }
