@@ -5,9 +5,10 @@ import {TopRatedProductQuickViewComponent} from './top-rated-product-quick-view/
 import {CategoryHomeComponent} from './category-home/category-home.component';
 import {RouterModule} from "@angular/router";
 import {PRODUCTS_ROUTES} from "./products.routes";
-import { DiscountPipe } from './discount.pipe';
-import { DetailComponent } from './detail/detail.component';
-import { CartComponent } from './cart/cart.component';
+import {DiscountPipe} from './discount.pipe';
+import {DetailComponent} from './detail/detail.component';
+import {CartComponent} from './cart/cart.component';
+import {CheckoutComponent} from './checkout/checkout.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { CartComponent } from './cart/cart.component';
     CategoryHomeComponent,
     DiscountPipe,
     DetailComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   exports: [TopRatedProductsComponent]
 })

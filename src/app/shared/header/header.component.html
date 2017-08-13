@@ -5,8 +5,9 @@
     </div>
     <div class="agile-login">
       <ul>
-        <li><a [routerLink]="'register'"> Create Account </a></li>
-        <li><a [routerLink]="'login'">Login</a></li>
+        <li><a *ngIf="!userLoggedIn" [routerLink]="'register'"> Create Account </a></li>
+        <li><a *ngIf="!userLoggedIn" [routerLink]="'login'">Login</a></li>
+        <li><a *ngIf="userLoggedIn" [routerLink]="'/home'" (click)="logout()">Logout</a></li>
         <li><a [routerLink]="'contact'">Help</a></li>
 
       </ul>

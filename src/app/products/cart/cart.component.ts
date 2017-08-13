@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../../api.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'sf-cart',
@@ -18,11 +19,15 @@ export class CartComponent implements OnInit {
     return total;
   }
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private  router: Router) {
   }
 
   ngOnInit() {
     this.cart = this.apiService.cart;
+  }
+
+  checkout() {
+    this.router.navigate(['/checkout'])
   }
 
 }
