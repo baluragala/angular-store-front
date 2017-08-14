@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from "../../api.service";
 import {Router} from "@angular/router";
+import {ProductService} from "../../product.service";
 
 @Component({
   selector: 'sf-cart',
@@ -19,11 +19,11 @@ export class CartComponent implements OnInit {
     return total;
   }
 
-  constructor(private apiService: ApiService, private  router: Router) {
+  constructor(private productService: ProductService, private  router: Router) {
   }
 
   ngOnInit() {
-    this.cart = this.apiService.cart;
+    this.cart = this.productService.cart;
   }
 
   checkout() {

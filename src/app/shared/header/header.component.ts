@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from "../../api.service";
 import {UserService} from "../../user/user.service";
+import {ProductService} from "../../product.service";
 
 @Component({
   selector: 'sf-header',
@@ -12,14 +12,14 @@ export class HeaderComponent implements OnInit {
   cart = [];
   userLoggedIn: boolean;
 
-  constructor(private apiService: ApiService,
+  constructor(private productService: ProductService,
               private userService: UserService) {
   }
 
   ngOnInit() {
-    this.apiService
+    this.productService
       .getCartObservable()
-      .subscribe(data => this.cart = this.apiService.cart);
+      .subscribe(data => this.cart = this.productService.cart);
 
     this.userService
       .getObservable()

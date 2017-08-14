@@ -4,7 +4,7 @@ import "rxjs/add/operator/map";
 import {Subject} from "rxjs/Subject";
 
 @Injectable()
-export class ApiService {
+export class ProductService {
 
   subject: Subject<any> = new Subject();
 

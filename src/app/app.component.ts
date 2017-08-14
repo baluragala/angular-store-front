@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from "./api.service";
+import {ProductService} from "./product.service";
+
 
 @Component({
   selector: 'sf-root',
@@ -10,12 +11,12 @@ export class AppComponent implements OnInit {
 
   menu: Array<string> = [];
 
-  constructor(private apiService: ApiService) {
+  constructor(private productService: ProductService) {
 
   }
 
   ngOnInit() {
-    this.apiService.getCategories()
+    this.productService.getCategories()
       .subscribe((categories) => this.menu = categories)
   }
 

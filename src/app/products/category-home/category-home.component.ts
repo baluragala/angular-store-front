@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ApiService} from "../../api.service";
+import {ProductService} from "../../product.service";
 
 @Component({
   selector: 'sf-category-home',
@@ -12,7 +12,7 @@ export class CategoryHomeComponent implements OnInit {
   products: Array<any> = [];
 
   constructor(private activatedRoute: ActivatedRoute,
-              private apiService: ApiService) {
+              private productService: ProductService) {
 
     this.activatedRoute.params.subscribe((params) => {
       this.category = params["categoryName"];
@@ -20,7 +20,7 @@ export class CategoryHomeComponent implements OnInit {
     });
 
     this.activatedRoute.queryParams.subscribe((queryParams) => {
-      this.apiService.getProductsByCategory(queryParams.id)
+      this.productService.getProductsByCategory(queryParams.id)
         .subscribe((products) => this.products = products)
 
     })

@@ -9,6 +9,7 @@ import {DiscountPipe} from './discount.pipe';
 import {DetailComponent} from './detail/detail.component';
 import {CartComponent} from './cart/cart.component';
 import {CheckoutComponent} from './checkout/checkout.component';
+import {ProductService} from "../product.service";
 
 @NgModule({
   imports: [
@@ -24,6 +25,8 @@ import {CheckoutComponent} from './checkout/checkout.component';
     CartComponent,
     CheckoutComponent
   ],
+
+  providers: [ProductService],
   exports: [TopRatedProductsComponent]
 })
 export class ProductsModule {

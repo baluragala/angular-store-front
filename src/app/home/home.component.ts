@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from "../api.service";
+import {ProductService} from "../product.service";
 
 @Component({
   selector: 'sf-home',
@@ -10,11 +10,11 @@ export class HomeComponent implements OnInit {
 
   allProducts;
 
-  constructor(private apiService: ApiService) {
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit() {
-    this.apiService.getAllProducts().subscribe(
+    this.productService.getAllProducts().subscribe(
       products => this.allProducts = products)
   }
 

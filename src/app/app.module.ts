@@ -10,7 +10,6 @@ import {RouterModule} from "@angular/router";
 import {APP_ROUTES} from "./app.routes";
 import {UserModule} from "./user/user.module";
 import {ContactComponent} from './contact/contact.component';
-import {ApiService} from "./api.service";
 import {HttpModule} from "@angular/http";
 
 
@@ -31,8 +30,7 @@ import {HttpModule} from "@angular/http";
     RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [
-    {provide: 'API_ENDPOINT', useValue: 'http://localhost:3000/api'},
-    ApiService
+    {provide: 'API_ENDPOINT', useValue: 'http://localhost:3000/api'}
   ],
   bootstrap: [AppComponent]
 })
