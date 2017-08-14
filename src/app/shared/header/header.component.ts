@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../user/user.service";
-import {ProductService} from "../../product.service";
+import {ProductService} from "../../products/product.service";
 
 @Component({
   selector: 'sf-header',

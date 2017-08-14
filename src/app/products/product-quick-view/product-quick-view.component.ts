@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {ProductService} from "../../product.service";
+import {ProductService} from "../product.service";
 
 @Component({
   selector: 'sf-product-quick-view',
