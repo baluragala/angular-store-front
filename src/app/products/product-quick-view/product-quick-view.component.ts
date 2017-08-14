@@ -2,11 +2,11 @@ import {Component, OnInit, Input} from '@angular/core';
 import {ApiService} from "../../api.service";
 
 @Component({
-  selector: 'sf-top-rated-product-quick-view',
-  templateUrl: './top-rated-product-quick-view.component.html',
-  styleUrls: ['./top-rated-product-quick-view.component.css']
+  selector: 'sf-product-quick-view',
+  templateUrl: './product-quick-view.component.html',
+  styleUrls: ['./product-quick-view.component.css']
 })
-export class TopRatedProductQuickViewComponent implements OnInit {
+export class ProductQuickViewComponent implements OnInit {
 
   @Input() product;
 
