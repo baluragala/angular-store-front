@@ -6,12 +6,14 @@ import {NavigationComponent} from './navigation/navigation.component';
 import {FooterComponent} from './footer/footer.component';
 import {BsDropdownModule} from "ngx-bootstrap";
 import {RouterModule} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
     BsDropdownModule.forRoot(),
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   declarations: [
     HeaderComponent,

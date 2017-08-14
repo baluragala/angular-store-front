@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="header">Search Results</h2>
+</div>
+<div class="container">
+  <div class="col-md-3" *ngFor="let product of searchedProducts">
+    <div class="product-quick-view">
+      <figure>
+        <a><img title=" " alt=" " src="../../../assets/images/7.png"></a>
+        <p>{{product.name}}</p>
+        <h4 class="price"><span [ngClass]="{'original-price': product.offerPrice > 0}">{{product.price | currency:'USD':true}}</span>
+          <span class="offer-price">{{product.offerPrice | currency:'USD':true}}</span>
+        </h4>
+      </figure>
+    </div>
+  </div>
+</div>
+
+
+
+
+

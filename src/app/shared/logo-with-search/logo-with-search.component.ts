@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'sf-logo-with-search',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoWithSearchComponent implements OnInit {
 
-  constructor() { }
+  searchTerm;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
+  }
+
+  search() {
+    this.router.navigate(['search', this.searchTerm])
   }
 
 }

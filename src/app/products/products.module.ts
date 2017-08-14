@@ -10,10 +10,13 @@ import {DetailComponent} from './detail/detail.component';
 import {CartComponent} from './cart/cart.component';
 import {CheckoutComponent} from './checkout/checkout.component';
 import {ProductService} from "./product.service";
+import {SearchComponent} from './search/search.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(PRODUCTS_ROUTES)
   ],
   declarations: [
@@ -23,7 +26,8 @@ import {ProductService} from "./product.service";
     DiscountPipe,
     DetailComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SearchComponent
   ],
 
   providers: [ProductService],
